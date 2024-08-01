@@ -3,7 +3,7 @@ using StackExchange.Redis;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-ConnectionMultiplexer connection = await ConnectionMultiplexer.ConnectAsync("localhost:1453");
+ConnectionMultiplexer connection = await ConnectionMultiplexer.ConnectAsync("");
 ISubscriber subscriber = connection.GetSubscriber();
 
 //while (true)
