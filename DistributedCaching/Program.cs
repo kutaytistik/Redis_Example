@@ -7,8 +7,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//Bu servisi uygulamaya ekledik hangi redis sunucusuna baðlanacaðýmýzý bildirdik
-builder.Services.AddStackExchangeRedisCache(options=>options.Configuration="localhost:1453");
+//Bu servisi uygulamaya ekledik hangi redis sunucusuna baÃ°lanacaÃ°Ã½mÃ½zÃ½ bildirdik
+builder.Services.AddStackExchangeRedisCache(options=>options.Configuration="");
 
 var app = builder.Build();
 
