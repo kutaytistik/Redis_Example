@@ -8,9 +8,9 @@ namespace Redis.Sentinel.Services
         {
             EndPoints =
             {
-                { "localhost",6383},
-                { "localhost",6384},
-                { "localhost",6385}
+                { "localhost",},
+                { "localhost",},
+                { "localhost",}
             },
             CommandMap = CommandMap.Sentinel,
             AbortOnConnectFail = false
@@ -41,10 +41,7 @@ namespace Redis.Sentinel.Services
 
             var localMasterIp = masterEndPoint.ToString() switch
             {
-                //"172.17.0.5:6379" => "localhost:6379",
-                //"172.18.0.6:6379" => "localhost:6380",
-                //"172.18.0.7:6379" => "localhost:6381",
-                //"172.18.0.8:6379" => "localhost:6382"
+                
             };
             ConnectionMultiplexer masterConnection = await ConnectionMultiplexer.ConnectAsync(localMasterIp);
 
